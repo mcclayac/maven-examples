@@ -7,6 +7,7 @@ public class Application1 {
         System.out.println("Hello World,  Tony McClay, was here");
         System.out.println("and now I am not");
         System.out.println("This is a simple application");
+        System.out.println("Application 1");
 
     }
 }
