@@ -9,4 +9,6 @@
 
     <name>Learning Maven Examples</name>
     <description>This is a project to remember maven</description>
+    <url>https://github.com/mcclayac/maven-examples</url>
+
 </project>
