@@ -3,14 +3,30 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <!--<build>-->
-        <!--<sourceDirectory>src/code/java</sourceDirectory>-->
-        <!--<directory>mytarget</directory>-->
+    <!--<sourceDirectory>src/code/java</sourceDirectory>-->
+    <!--<directory>mytarget</directory>-->
     <!--</build>-->
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.bigman.maven</groupId>
-    <artifactId>maven-hello-world</artifactId>
+    <artifactId>maven-examples</artifactId>
     <version>0.0.1</version>
+
+    <profiles>
+        <profile>
+            <id>production</id>
+            <activation>
+                <property>
+                    <name>env.PACKAGE_ENV</name>
+                    <value>PROD</value>
+                </property>
+            </activation>
+            <build>
+                <directory>production-code</directory>
+            </build>
+        </profile>
+    </profiles>
+
 
     <name>Learning Maven Examples</name>
     <description>This is a project to remember maven</description>
